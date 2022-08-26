@@ -1,0 +1,7 @@
+C:\Users\melik\source\repos\SDP\Intro02\Intro02.Console01\bin\Debug\Intro02.Console01.exe.config
+C:\Users\melik\source\repos\SDP\Intro02\Intro02.Console01\bin\Debug\Intro02.Console01.exe
+C:\Users\melik\source\repos\SDP\Intro02\Intro02.Console01\bin\Debug\Intro02.Console01.pdb
+C:\Users\melik\source\repos\SDP\Intro02\Intro02.Console01\obj\Debug\Intro02.Console01.csproj.AssemblyReference.cache
+C:\Users\melik\source\repos\SDP\Intro02\Intro02.Console01\obj\Debug\Intro02.Console01.csproj.CoreCompileInputs.cache
+C:\Users\melik\source\repos\SDP\Intro02\Intro02.Console01\obj\Debug\Intro02.Console01.exe
+C:\Users\melik\source\repos\SDP\Intro02\Intro02.Console01\obj\Debug\Intro02.Console01.pdb

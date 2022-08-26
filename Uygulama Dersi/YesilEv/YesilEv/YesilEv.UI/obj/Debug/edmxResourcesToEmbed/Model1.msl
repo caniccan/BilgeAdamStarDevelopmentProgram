@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="YesilEvModelStoreContainer" CdmEntityContainer="YesilEvEntities">
+    <EntitySetMapping Name="AramaGecmisis">
+      <EntityTypeMapping TypeName="YesilEvModel.AramaGecmisi">
+        <MappingFragment StoreEntitySet="AramaGecmisi">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AramaIcerik" ColumnName="AramaIcerik" />
+          <ScalarProperty Name="AramaTarihi" ColumnName="AramaTarihi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Duzenlemes">
+      <EntityTypeMapping TypeName="YesilEvModel.Duzenleme">
+        <MappingFragment StoreEntitySet="Duzenleme">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DuzenlemeNedeni" ColumnName="DuzenlemeNedeni" />
+          <ScalarProperty Name="UrunID" ColumnName="UrunID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Favorilers">
+      <EntityTypeMapping TypeName="YesilEvModel.Favoriler">
+        <MappingFragment StoreEntitySet="Favoriler">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UrunID" ColumnName="UrunID" />
+          <ScalarProperty Name="FavorilerAdi" ColumnName="FavorilerAdi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FavoriListes">
+      <EntityTypeMapping TypeName="YesilEvModel.FavoriListe">
+        <MappingFragment StoreEntitySet="FavoriListe">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FavorilerID" ColumnName="FavorilerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KaraListes">
+      <EntityTypeMapping TypeName="YesilEvModel.KaraListe">
+        <MappingFragment StoreEntitySet="KaraListe">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UrunID" ColumnName="UrunID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kategoris">
+      <EntityTypeMapping TypeName="YesilEvModel.Kategori">
+        <MappingFragment StoreEntitySet="Kategori">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KategoriAdi" ColumnName="KategoriAdi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rols">
+      <EntityTypeMapping TypeName="YesilEvModel.Rol">
+        <MappingFragment StoreEntitySet="Rol">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RolAdi" ColumnName="RolAdi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="YesilEvModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ureticis">
+      <EntityTypeMapping TypeName="YesilEvModel.Uretici">
+        <MappingFragment StoreEntitySet="Uretici">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UreticiAdi" ColumnName="UreticiAdi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Uruns">
+      <EntityTypeMapping TypeName="YesilEvModel.Urun">
+        <MappingFragment StoreEntitySet="Urun">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BarkodNo" ColumnName="BarkodNo" />
+          <ScalarProperty Name="UreticiID" ColumnName="UreticiID" />
+          <ScalarProperty Name="UrunAdi" ColumnName="UrunAdi" />
+          <ScalarProperty Name="KategoriID" ColumnName="KategoriID" />
+          <ScalarProperty Name="UrunIcerik" ColumnName="UrunIcerik" />
+          <ScalarProperty Name="OnYuz" ColumnName="OnYuz" />
+          <ScalarProperty Name="ArkaYuz" ColumnName="ArkaYuz" />
+          <ScalarProperty Name="TakipNo" ColumnName="TakipNo" />
+          <ScalarProperty Name="DuzenlendiMi" ColumnName="DuzenlendiMi" />
+          <ScalarProperty Name="UyeID" ColumnName="UyeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Uyes">
+      <EntityTypeMapping TypeName="YesilEvModel.Uye">
+        <MappingFragment StoreEntitySet="Uye">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RolID" ColumnName="RolID" />
+          <ScalarProperty Name="AdiSoyadi" ColumnName="AdiSoyadi" />
+          <ScalarProperty Name="TelNo" ColumnName="TelNo" />
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

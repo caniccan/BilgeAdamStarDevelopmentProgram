@@ -1,0 +1,13 @@
+C:\Users\Pc\source\repos\MovieTicket\MovieTicket\bin\Debug\MovieTicket.exe.config
+C:\Users\Pc\source\repos\MovieTicket\MovieTicket\bin\Debug\MovieTicket.exe
+C:\Users\Pc\source\repos\MovieTicket\MovieTicket\bin\Debug\MovieTicket.pdb
+C:\Users\Pc\source\repos\MovieTicket\MovieTicket\obj\Debug\MovieTicket.csproj.AssemblyReference.cache
+C:\Users\Pc\source\repos\MovieTicket\MovieTicket\obj\Debug\MovieTicket.csproj.SuggestedBindingRedirects.cache
+C:\Users\Pc\source\repos\MovieTicket\MovieTicket\obj\Debug\MovieTicket.Form1.resources
+C:\Users\Pc\source\repos\MovieTicket\MovieTicket\obj\Debug\MovieTicket.Properties.Resources.resources
+C:\Users\Pc\source\repos\MovieTicket\MovieTicket\obj\Debug\MovieTicket.csproj.GenerateResource.cache
+C:\Users\Pc\source\repos\MovieTicket\MovieTicket\obj\Debug\MovieTicket.csproj.CoreCompileInputs.cache
+C:\Users\Pc\source\repos\MovieTicket\MovieTicket\obj\Debug\MovieTicket.exe
+C:\Users\Pc\source\repos\MovieTicket\MovieTicket\obj\Debug\MovieTicket.pdb
+C:\Users\Pc\source\repos\MovieTicket\MovieTicket\obj\Debug\MovieTicket.Form2.resources
+C:\Users\Pc\source\repos\MovieTicket\MovieTicket\obj\Debug\MovieTicket.Form3.resources

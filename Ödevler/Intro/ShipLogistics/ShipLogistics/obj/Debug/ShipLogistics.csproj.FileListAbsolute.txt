@@ -1,0 +1,13 @@
+C:\Users\Pc\source\repos\ShipLogistics\ShipLogistics\bin\Debug\ShipLogistics.exe.config
+C:\Users\Pc\source\repos\ShipLogistics\ShipLogistics\bin\Debug\ShipLogistics.exe
+C:\Users\Pc\source\repos\ShipLogistics\ShipLogistics\bin\Debug\ShipLogistics.pdb
+C:\Users\Pc\source\repos\ShipLogistics\ShipLogistics\obj\Debug\ShipLogistics.csproj.AssemblyReference.cache
+C:\Users\Pc\source\repos\ShipLogistics\ShipLogistics\obj\Debug\ShipLogistics.csproj.SuggestedBindingRedirects.cache
+C:\Users\Pc\source\repos\ShipLogistics\ShipLogistics\obj\Debug\ShipLogistics.Form1.resources
+C:\Users\Pc\source\repos\ShipLogistics\ShipLogistics\obj\Debug\ShipLogistics.Properties.Resources.resources
+C:\Users\Pc\source\repos\ShipLogistics\ShipLogistics\obj\Debug\ShipLogistics.csproj.GenerateResource.cache
+C:\Users\Pc\source\repos\ShipLogistics\ShipLogistics\obj\Debug\ShipLogistics.csproj.CoreCompileInputs.cache
+C:\Users\Pc\source\repos\ShipLogistics\ShipLogistics\obj\Debug\ShipLogistics.exe
+C:\Users\Pc\source\repos\ShipLogistics\ShipLogistics\obj\Debug\ShipLogistics.pdb
+C:\Users\Pc\source\repos\ShipLogistics\ShipLogistics\obj\Debug\ShipLogistics.Form2.resources
+C:\Users\Pc\source\repos\ShipLogistics\ShipLogistics\obj\Debug\ShipLogistics.Form3.resources

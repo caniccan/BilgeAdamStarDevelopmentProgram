@@ -1,0 +1,15 @@
+C:\Users\Pc\source\repos\ServiceRegistrationForm\ServiceRegistrationForm\obj\Debug\ServiceRegistrationForm.csproj.AssemblyReference.cache
+C:\Users\Pc\source\repos\ServiceRegistrationForm\ServiceRegistrationForm\obj\Debug\ServiceRegistrationForm.csproj.SuggestedBindingRedirects.cache
+C:\Users\Pc\source\repos\ServiceRegistrationForm\ServiceRegistrationForm\obj\Debug\ServiceRegistrationForm.Form1.resources
+C:\Users\Pc\source\repos\ServiceRegistrationForm\ServiceRegistrationForm\obj\Debug\ServiceRegistrationForm.Form2.resources
+C:\Users\Pc\source\repos\ServiceRegistrationForm\ServiceRegistrationForm\obj\Debug\ServiceRegistrationForm.Form3.resources
+C:\Users\Pc\source\repos\ServiceRegistrationForm\ServiceRegistrationForm\obj\Debug\ServiceRegistrationForm.Properties.Resources.resources
+C:\Users\Pc\source\repos\ServiceRegistrationForm\ServiceRegistrationForm\obj\Debug\ServiceRegistrationForm.csproj.GenerateResource.cache
+C:\Users\Pc\source\repos\ServiceRegistrationForm\ServiceRegistrationForm\obj\Debug\ServiceRegistrationForm.csproj.CoreCompileInputs.cache
+C:\Users\Pc\source\repos\ServiceRegistrationForm\ServiceRegistrationForm\bin\Debug\ServiceRegistrationForm.exe.config
+C:\Users\Pc\source\repos\ServiceRegistrationForm\ServiceRegistrationForm\bin\Debug\ServiceRegistrationForm.exe
+C:\Users\Pc\source\repos\ServiceRegistrationForm\ServiceRegistrationForm\bin\Debug\ServiceRegistrationForm.pdb
+C:\Users\Pc\source\repos\ServiceRegistrationForm\ServiceRegistrationForm\obj\Debug\ServiceRegistrationForm.exe
+C:\Users\Pc\source\repos\ServiceRegistrationForm\ServiceRegistrationForm\obj\Debug\ServiceRegistrationForm.pdb
+C:\Users\Pc\source\repos\ServiceRegistrationForm\ServiceRegistrationForm\obj\Debug\ServiceRegistrationForm.Form4.resources
+C:\Users\Pc\source\repos\ServiceRegistrationForm\ServiceRegistrationForm\obj\Debug\ServiceRegistrationForm.Form5.resources

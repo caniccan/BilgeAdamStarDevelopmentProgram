@@ -1,0 +1,12 @@
+C:\Users\melik\source\repos\SDP\SDPMySample\SDPMySample.Core\bin\Debug\SDPMySample.Core.dll
+C:\Users\melik\source\repos\SDP\SDPMySample\SDPMySample.Core\bin\Debug\SDPMySample.Core.pdb
+C:\Users\melik\source\repos\SDP\SDPMySample\SDPMySample.Core\obj\Debug\SDPMySample.Core.csproj.AssemblyReference.cache
+C:\Users\melik\source\repos\SDP\SDPMySample\SDPMySample.Core\obj\Debug\SDPMySample.Core.csproj.CoreCompileInputs.cache
+C:\Users\melik\source\repos\SDP\SDPMySample\SDPMySample.Core\obj\Debug\SDPMySample.Core.dll
+C:\Users\melik\source\repos\SDP\SDPMySample\SDPMySample.Core\obj\Debug\SDPMySample.Core.pdb
+C:\Users\Pc\Desktop\SDPMySample-20220822T134203Z-001\SDPMySample\SDPMySample.Core\bin\Debug\SDPMySample.Core.dll
+C:\Users\Pc\Desktop\SDPMySample-20220822T134203Z-001\SDPMySample\SDPMySample.Core\bin\Debug\SDPMySample.Core.pdb
+C:\Users\Pc\Desktop\SDPMySample-20220822T134203Z-001\SDPMySample\SDPMySample.Core\obj\Debug\SDPMySample.Core.csproj.AssemblyReference.cache
+C:\Users\Pc\Desktop\SDPMySample-20220822T134203Z-001\SDPMySample\SDPMySample.Core\obj\Debug\SDPMySample.Core.csproj.CoreCompileInputs.cache
+C:\Users\Pc\Desktop\SDPMySample-20220822T134203Z-001\SDPMySample\SDPMySample.Core\obj\Debug\SDPMySample.Core.dll
+C:\Users\Pc\Desktop\SDPMySample-20220822T134203Z-001\SDPMySample\SDPMySample.Core\obj\Debug\SDPMySample.Core.pdb

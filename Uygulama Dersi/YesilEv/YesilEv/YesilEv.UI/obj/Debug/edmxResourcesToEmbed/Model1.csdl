@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="YesilEvModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AramaGecmisi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="AramaIcerik" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AramaTarihi" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Duzenleme">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="DuzenlemeNedeni" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UrunID" Type="Int32" />
+    <NavigationProperty Name="Urun" Relationship="Self.FK_Duzenleme_Urun" FromRole="Duzenleme" ToRole="Urun" />
+  </EntityType>
+  <EntityType Name="Favoriler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="UrunID" Type="Int32" />
+    <Property Name="FavorilerAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Urun" Relationship="Self.FK_Favoriler_Urun" FromRole="Favoriler" ToRole="Urun" />
+    <NavigationProperty Name="FavoriListes" Relationship="Self.FK_FavoriListe_Favoriler" FromRole="Favoriler" ToRole="FavoriListe" />
+  </EntityType>
+  <EntityType Name="FavoriListe">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="FavorilerID" Type="Int32" />
+    <NavigationProperty Name="Favoriler" Relationship="Self.FK_FavoriListe_Favoriler" FromRole="FavoriListe" ToRole="Favoriler" />
+  </EntityType>
+  <EntityType Name="KaraListe">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="UrunID" Type="Int32" />
+    <NavigationProperty Name="Urun" Relationship="Self.FK_KaraListe_Urun" FromRole="KaraListe" ToRole="Urun" />
+  </EntityType>
+  <EntityType Name="Kategori">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="KategoriAdi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Urun" Relationship="Self.FK_Kategori_Urun" FromRole="Kategori" ToRole="Urun" />
+  </EntityType>
+  <EntityType Name="Rol">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="RolAdi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Uyes" Relationship="Self.FK_Uye_Rol" FromRole="Rol" ToRole="Uye" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Uretici">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="UreticiAdi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Uruns" Relationship="Self.FK_Urun_Uretici" FromRole="Uretici" ToRole="Urun" />
+  </EntityType>
+  <EntityType Name="Urun">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="BarkodNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UreticiID" Type="Int32" />
+    <Property Name="UrunAdi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KategoriID" Type="Int32" />
+    <Property Name="UrunIcerik" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OnYuz" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ArkaYuz" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TakipNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DuzenlendiMi" Type="Boolean" />
+    <Property Name="UyeID" Type="Int32" />
+    <NavigationProperty Name="Duzenlemes" Relationship="Self.FK_Duzenleme_Urun" FromRole="Urun" ToRole="Duzenleme" />
+    <NavigationProperty Name="Favorilers" Relationship="Self.FK_Favoriler_Urun" FromRole="Urun" ToRole="Favoriler" />
+    <NavigationProperty Name="KaraListes" Relationship="Self.FK_KaraListe_Urun" FromRole="Urun" ToRole="KaraListe" />
+    <NavigationProperty Name="Kategori" Relationship="Self.FK_Kategori_Urun" FromRole="Urun" ToRole="Kategori" />
+    <NavigationProperty Name="Uretici" Relationship="Self.FK_Urun_Uretici" FromRole="Urun" ToRole="Uretici" />
+    <NavigationProperty Name="Uye" Relationship="Self.FK_Urun_Uye" FromRole="Urun" ToRole="Uye" />
+    <NavigationProperty Name="Uye1" Relationship="Self.FK_Urun_Uye1" FromRole="Urun" ToRole="Uye" />
+  </EntityType>
+  <EntityType Name="Uye">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="RolID" Type="Int32" />
+    <Property Name="AdiSoyadi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TelNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Sifre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Rol" Relationship="Self.FK_Uye_Rol" FromRole="Uye" ToRole="Rol" />
+    <NavigationProperty Name="Uruns" Relationship="Self.FK_Urun_Uye" FromRole="Uye" ToRole="Urun" />
+    <NavigationProperty Name="Uruns1" Relationship="Self.FK_Urun_Uye1" FromRole="Uye" ToRole="Urun" />
+  </EntityType>
+  <Association Name="FK_Duzenleme_Urun">
+    <End Role="Urun" Type="Self.Urun" Multiplicity="0..1" />
+    <End Role="Duzenleme" Type="Self.Duzenleme" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Urun">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Duzenleme">
+        <PropertyRef Name="UrunID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Favoriler_Urun">
+    <End Role="Urun" Type="Self.Urun" Multiplicity="0..1" />
+    <End Role="Favoriler" Type="Self.Favoriler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Urun">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Favoriler">
+        <PropertyRef Name="UrunID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FavoriListe_Favoriler">
+    <End Role="Favoriler" Type="Self.Favoriler" Multiplicity="0..1" />
+    <End Role="FavoriListe" Type="Self.FavoriListe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Favoriler">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="FavoriListe">
+        <PropertyRef Name="FavorilerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KaraListe_Urun">
+    <End Role="Urun" Type="Self.Urun" Multiplicity="0..1" />
+    <End Role="KaraListe" Type="Self.KaraListe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Urun">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="KaraListe">
+        <PropertyRef Name="UrunID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kategori_Urun">
+    <End Role="Urun" Type="Self.Urun" Multiplicity="1" />
+    <End Role="Kategori" Type="Self.Kategori" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Urun">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Kategori">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Uye_Rol">
+    <End Role="Rol" Type="Self.Rol" Multiplicity="0..1" />
+    <End Role="Uye" Type="Self.Uye" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Uye">
+        <PropertyRef Name="RolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Urun_Uretici">
+    <End Role="Uretici" Type="Self.Uretici" Multiplicity="0..1" />
+    <End Role="Urun" Type="Self.Urun" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uretici">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Urun">
+        <PropertyRef Name="UreticiID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Urun_Uye">
+    <End Role="Uye" Type="Self.Uye" Multiplicity="0..1" />
+    <End Role="Urun" Type="Self.Urun" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uye">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Urun">
+        <PropertyRef Name="UyeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Urun_Uye1">
+    <End Role="Uye" Type="Self.Uye" Multiplicity="0..1" />
+    <End Role="Urun" Type="Self.Urun" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uye">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Urun">
+        <PropertyRef Name="UyeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="YesilEvEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AramaGecmisis" EntityType="Self.AramaGecmisi" />
+    <EntitySet Name="Duzenlemes" EntityType="Self.Duzenleme" />
+    <EntitySet Name="Favorilers" EntityType="Self.Favoriler" />
+    <EntitySet Name="FavoriListes" EntityType="Self.FavoriListe" />
+    <EntitySet Name="KaraListes" EntityType="Self.KaraListe" />
+    <EntitySet Name="Kategoris" EntityType="Self.Kategori" />
+    <EntitySet Name="Rols" EntityType="Self.Rol" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Ureticis" EntityType="Self.Uretici" />
+    <EntitySet Name="Uruns" EntityType="Self.Urun" />
+    <EntitySet Name="Uyes" EntityType="Self.Uye" />
+    <AssociationSet Name="FK_Duzenleme_Urun" Association="Self.FK_Duzenleme_Urun">
+      <End Role="Urun" EntitySet="Uruns" />
+      <End Role="Duzenleme" EntitySet="Duzenlemes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Favoriler_Urun" Association="Self.FK_Favoriler_Urun">
+      <End Role="Urun" EntitySet="Uruns" />
+      <End Role="Favoriler" EntitySet="Favorilers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FavoriListe_Favoriler" Association="Self.FK_FavoriListe_Favoriler">
+      <End Role="Favoriler" EntitySet="Favorilers" />
+      <End Role="FavoriListe" EntitySet="FavoriListes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KaraListe_Urun" Association="Self.FK_KaraListe_Urun">
+      <End Role="Urun" EntitySet="Uruns" />
+      <End Role="KaraListe" EntitySet="KaraListes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kategori_Urun" Association="Self.FK_Kategori_Urun">
+      <End Role="Urun" EntitySet="Uruns" />
+      <End Role="Kategori" EntitySet="Kategoris" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Uye_Rol" Association="Self.FK_Uye_Rol">
+      <End Role="Rol" EntitySet="Rols" />
+      <End Role="Uye" EntitySet="Uyes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Urun_Uretici" Association="Self.FK_Urun_Uretici">
+      <End Role="Uretici" EntitySet="Ureticis" />
+      <End Role="Urun" EntitySet="Uruns" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Urun_Uye" Association="Self.FK_Urun_Uye">
+      <End Role="Uye" EntitySet="Uyes" />
+      <End Role="Urun" EntitySet="Uruns" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Urun_Uye1" Association="Self.FK_Urun_Uye1">
+      <End Role="Uye" EntitySet="Uyes" />
+      <End Role="Urun" EntitySet="Uruns" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

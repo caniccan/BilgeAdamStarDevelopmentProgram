@@ -1,0 +1,11 @@
+C:\Users\Pc\source\repos\Indexer\Indexer\bin\Debug\Indexer.exe.config
+C:\Users\Pc\source\repos\Indexer\Indexer\bin\Debug\Indexer.exe
+C:\Users\Pc\source\repos\Indexer\Indexer\bin\Debug\Indexer.pdb
+C:\Users\Pc\source\repos\Indexer\Indexer\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\Pc\source\repos\Indexer\Indexer\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\Pc\source\repos\Indexer\Indexer\obj\Debug\Indexer.csproj.AssemblyReference.cache
+C:\Users\Pc\source\repos\Indexer\Indexer\obj\Debug\Indexer.csproj.SuggestedBindingRedirects.cache
+C:\Users\Pc\source\repos\Indexer\Indexer\obj\Debug\Indexer.csproj.CoreCompileInputs.cache
+C:\Users\Pc\source\repos\Indexer\Indexer\obj\Debug\Indexer.csproj.CopyComplete
+C:\Users\Pc\source\repos\Indexer\Indexer\obj\Debug\Indexer.exe
+C:\Users\Pc\source\repos\Indexer\Indexer\obj\Debug\Indexer.pdb

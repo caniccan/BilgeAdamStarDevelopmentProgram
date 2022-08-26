@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="YesilEvModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AramaGecmisi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="AramaIcerik" Type="nvarchar(max)" />
+    <Property Name="AramaTarihi" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Duzenleme">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="DuzenlemeNedeni" Type="nvarchar(max)" />
+    <Property Name="UrunID" Type="int" />
+  </EntityType>
+  <EntityType Name="Favoriler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="UrunID" Type="int" />
+    <Property Name="FavorilerAdi" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="FavoriListe">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="FavorilerID" Type="int" />
+  </EntityType>
+  <EntityType Name="KaraListe">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="UrunID" Type="int" />
+  </EntityType>
+  <EntityType Name="Kategori">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="KategoriAdi" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Rol">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="RolAdi" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Uretici">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="UreticiAdi" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Urun">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="BarkodNo" Type="nvarchar(max)" />
+    <Property Name="UreticiID" Type="int" />
+    <Property Name="UrunAdi" Type="nvarchar(max)" />
+    <Property Name="KategoriID" Type="int" />
+    <Property Name="UrunIcerik" Type="nvarchar(max)" />
+    <Property Name="OnYuz" Type="nvarchar(max)" />
+    <Property Name="ArkaYuz" Type="nvarchar(max)" />
+    <Property Name="TakipNo" Type="nvarchar(max)" />
+    <Property Name="DuzenlendiMi" Type="bit" />
+    <Property Name="UyeID" Type="int" />
+  </EntityType>
+  <EntityType Name="Uye">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="RolID" Type="int" />
+    <Property Name="AdiSoyadi" Type="nvarchar(max)" />
+    <Property Name="TelNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="KullaniciAdi" Type="nvarchar(max)" />
+    <Property Name="Sifre" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="FK_Duzenleme_Urun">
+    <End Role="Urun" Type="Self.Urun" Multiplicity="0..1" />
+    <End Role="Duzenleme" Type="Self.Duzenleme" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Urun">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Duzenleme">
+        <PropertyRef Name="UrunID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Favoriler_Urun">
+    <End Role="Urun" Type="Self.Urun" Multiplicity="0..1" />
+    <End Role="Favoriler" Type="Self.Favoriler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Urun">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Favoriler">
+        <PropertyRef Name="UrunID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FavoriListe_Favoriler">
+    <End Role="Favoriler" Type="Self.Favoriler" Multiplicity="0..1" />
+    <End Role="FavoriListe" Type="Self.FavoriListe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Favoriler">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="FavoriListe">
+        <PropertyRef Name="FavorilerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KaraListe_Urun">
+    <End Role="Urun" Type="Self.Urun" Multiplicity="0..1" />
+    <End Role="KaraListe" Type="Self.KaraListe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Urun">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="KaraListe">
+        <PropertyRef Name="UrunID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kategori_Urun">
+    <End Role="Urun" Type="Self.Urun" Multiplicity="1" />
+    <End Role="Kategori" Type="Self.Kategori" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Urun">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Kategori">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Urun_Uretici">
+    <End Role="Uretici" Type="Self.Uretici" Multiplicity="0..1" />
+    <End Role="Urun" Type="Self.Urun" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uretici">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Urun">
+        <PropertyRef Name="UreticiID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Urun_Uye">
+    <End Role="Uye" Type="Self.Uye" Multiplicity="0..1" />
+    <End Role="Urun" Type="Self.Urun" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uye">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Urun">
+        <PropertyRef Name="UyeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Urun_Uye1">
+    <End Role="Uye" Type="Self.Uye" Multiplicity="0..1" />
+    <End Role="Urun" Type="Self.Urun" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uye">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Urun">
+        <PropertyRef Name="UyeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Uye_Rol">
+    <End Role="Rol" Type="Self.Rol" Multiplicity="0..1" />
+    <End Role="Uye" Type="Self.Uye" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Uye">
+        <PropertyRef Name="RolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="YesilEvModelStoreContainer">
+    <EntitySet Name="AramaGecmisi" EntityType="Self.AramaGecmisi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Duzenleme" EntityType="Self.Duzenleme" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Favoriler" EntityType="Self.Favoriler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FavoriListe" EntityType="Self.FavoriListe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KaraListe" EntityType="Self.KaraListe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kategori" EntityType="Self.Kategori" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Rol" EntityType="Self.Rol" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Uretici" EntityType="Self.Uretici" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Urun" EntityType="Self.Urun" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Uye" EntityType="Self.Uye" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Duzenleme_Urun" Association="Self.FK_Duzenleme_Urun">
+      <End Role="Urun" EntitySet="Urun" />
+      <End Role="Duzenleme" EntitySet="Duzenleme" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Favoriler_Urun" Association="Self.FK_Favoriler_Urun">
+      <End Role="Urun" EntitySet="Urun" />
+      <End Role="Favoriler" EntitySet="Favoriler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FavoriListe_Favoriler" Association="Self.FK_FavoriListe_Favoriler">
+      <End Role="Favoriler" EntitySet="Favoriler" />
+      <End Role="FavoriListe" EntitySet="FavoriListe" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KaraListe_Urun" Association="Self.FK_KaraListe_Urun">
+      <End Role="Urun" EntitySet="Urun" />
+      <End Role="KaraListe" EntitySet="KaraListe" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kategori_Urun" Association="Self.FK_Kategori_Urun">
+      <End Role="Urun" EntitySet="Urun" />
+      <End Role="Kategori" EntitySet="Kategori" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Urun_Uretici" Association="Self.FK_Urun_Uretici">
+      <End Role="Uretici" EntitySet="Uretici" />
+      <End Role="Urun" EntitySet="Urun" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Urun_Uye" Association="Self.FK_Urun_Uye">
+      <End Role="Uye" EntitySet="Uye" />
+      <End Role="Urun" EntitySet="Urun" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Urun_Uye1" Association="Self.FK_Urun_Uye1">
+      <End Role="Uye" EntitySet="Uye" />
+      <End Role="Urun" EntitySet="Urun" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Uye_Rol" Association="Self.FK_Uye_Rol">
+      <End Role="Rol" EntitySet="Rol" />
+      <End Role="Uye" EntitySet="Uye" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

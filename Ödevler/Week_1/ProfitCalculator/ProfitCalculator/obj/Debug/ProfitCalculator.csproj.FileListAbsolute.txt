@@ -1,0 +1,8 @@
+C:\Users\Pc\source\repos\ProfitCalculator\ProfitCalculator\obj\Debug\ProfitCalculator.csproj.AssemblyReference.cache
+C:\Users\Pc\source\repos\ProfitCalculator\ProfitCalculator\obj\Debug\ProfitCalculator.csproj.SuggestedBindingRedirects.cache
+C:\Users\Pc\source\repos\ProfitCalculator\ProfitCalculator\obj\Debug\ProfitCalculator.csproj.CoreCompileInputs.cache
+C:\Users\Pc\source\repos\ProfitCalculator\ProfitCalculator\bin\Debug\ProfitCalculator.exe.config
+C:\Users\Pc\source\repos\ProfitCalculator\ProfitCalculator\bin\Debug\ProfitCalculator.exe
+C:\Users\Pc\source\repos\ProfitCalculator\ProfitCalculator\bin\Debug\ProfitCalculator.pdb
+C:\Users\Pc\source\repos\ProfitCalculator\ProfitCalculator\obj\Debug\ProfitCalculator.exe
+C:\Users\Pc\source\repos\ProfitCalculator\ProfitCalculator\obj\Debug\ProfitCalculator.pdb
